@@ -116,7 +116,7 @@
 		headers: {'Content-Type': 'application/json'},
 		body: JSON.stringify({email: `${emailID}`})
 		};
-		return fetch(`https://verifyx.onrender.com/auth/`,reqOptions)
+		return fetch(`http://127.0.0.1:3000/auth/`,reqOptions)
 		}
 
 		function verifyOTP(){
@@ -127,7 +127,7 @@
 		headers: {'Content-Type': 'application/json'},
 		body: JSON.stringify({email: `${emailID}`,otp: `${otp}`})
 		};
-		return fetch(`https://verifyx.onrender.com/auth/verify`,reqOptions).then(response => {
+		return fetch(`http://127.0.0.1:3000/auth/verify`,reqOptions).then(response => {
 		if(response.ok){
 		// If the OTP verification was successful, redirect to the "mint.html" page
 		window.location.href = "http:/mint";
