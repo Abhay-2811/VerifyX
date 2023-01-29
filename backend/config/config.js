@@ -6,7 +6,7 @@ const { SERVER_PORT } = require('../constants/constants');
 
 // Application configurations
 const PORT = SERVER_PORT;
-app.use(cors());
+app.use(cors("*"));
 app.use(express.json());
 
 // Application Routing
